@@ -3,6 +3,7 @@
 A full-stack warranty tracking web application. Register products, attach receipts, and monitor warranty expiry dates — all from a clean, responsive dashboard.
 
 **Live:** https://warrantyproject.greymansshop.dk
+
 **Portfolio Site:** https://dannyshayh.github.io/Portfolio/posts/warranty_frontend/frontend/
 
 ---
