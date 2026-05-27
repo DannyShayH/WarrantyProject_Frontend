@@ -1,0 +1,89 @@
+/* ============================================================
+   Warrantour — global styles
+   ============================================================ */
+
+/* ---------- Google Font import ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+/* ---------- CSS custom properties (design tokens) ---------- */
+:root {
+  --bg:               rgb(0, 0, 0);
+  --ink:              rgb(244, 237, 237);
+  --ink-dim:          rgba(244, 237, 237, 0.6);
+  --ink-faint:        rgba(244, 237, 237, 0.4);
+
+  --green-a:          rgb(74, 120, 86);
+  --green-b:          rgb(137, 222, 159);
+  --green-soft:       rgb(152, 217, 165);
+  --danger:           rgb(199, 80, 55);
+  --warn:             rgb(250, 184, 40);
+
+  --field-bg:         rgba(244, 237, 237, 0.12);
+  --field-bg-hover:   rgba(244, 237, 237, 0.18);
+  --field-border:     rgba(244, 237, 237, 0.28);
+  --field-border-focus: rgba(137, 222, 159, 0.85);
+
+  --radius-sm:        10px;
+  --radius-md:        14px;
+  --radius-lg:        18px;
+  --radius-xl:        24px;
+  --radius-pill:      999px;
+
+  --font:             "Kanit", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ---------- Reset & base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color:      var(--ink);
+  font-family: var(--font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+
+/* ---------- Mobile overflow safety net ---------- */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
+}
+
+img, video, svg, picture, canvas, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button, li {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* ---------- Animations ---------- */
+@keyframes wt-glow-pulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%       { opacity: 0.75; transform: scale(1.06); }
+}
+
+@keyframes wt-card-hover {
+  0%, 100% { transform: translateY(0)   rotate(calc(var(--rot, 0deg))); }
+  50%       { transform: translateY(-8px) rotate(calc(var(--rot, 0deg))); }
+}
+
+@keyframes wt-fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wt-slide-in {
+  from { opacity: 0; transform: translateX(-16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}

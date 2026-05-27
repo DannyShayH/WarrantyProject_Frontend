@@ -1,0 +1,55 @@
+/* ---------- Card stack ---------- */
+.glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--green-b) 0%, var(--green-a) 50%, transparent 75%);
+  filter: blur(40px);
+  animation: wt-glow-pulse 4.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.card {
+  position: absolute;
+  width: 340px;
+  max-width: calc(100% - 16px);
+  padding: 18px 22px;
+  background: rgba(20,24,17,0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(244,237,237,0.12);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eyebrow {
+  font-family: var(--font);
+  font-size: 13px;
+  color: var(--ink-faint);
+  letter-spacing: 1px;
+}
+
+.name {
+  font-family: var(--font);
+  font-size: 18px;
+  color: #fff;
+  margin-top: 2px;
+}
+
+.badge {
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+  margin-top: 8px;
+  display: inline-block;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .card { display: none; }
+  .glow { display: none; }
+}

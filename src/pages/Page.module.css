@@ -1,0 +1,37 @@
+/* ---------- Page wrapper ---------- */
+.page {
+  position: relative;
+  z-index: 1;
+  min-height: 80vh;
+  flex: 1;
+  animation: wt-fade-in 0.4s ease both;
+}
+
+.main {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 60px 48px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1280px) {
+  .main { padding: 48px 32px; }
+}
+
+@media (max-width: 1024px) {
+  .main { padding: 40px 24px; }
+}
+
+@media (max-width: 768px) {
+  .main { padding: 32px 20px; }
+}
+
+@media (max-width: 640px) {
+  .main { padding: 24px 16px; }
+}
+
+@media (max-width: 380px) {
+  .main { padding: 20px 12px; }
+}

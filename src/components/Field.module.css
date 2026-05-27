@@ -1,0 +1,70 @@
+/* ---------- Field ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: var(--font);
+  font-size: 16px;
+  color: var(--ink);
+  letter-spacing: 0.2px;
+}
+.labelRequired::after { content: " *"; color: var(--green-b); }
+
+.hint  { font-family: var(--font); font-size: 13px; color: var(--ink-faint); }
+.error { font-family: var(--font); font-size: 13px; color: #ffb1a3; }
+
+/* ---------- Input & Textarea ---------- */
+.input,
+.textarea {
+  font-family: var(--font);
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  outline: none;
+  transition: background 0.12s ease, border-color 0.12s ease;
+  width: 100%;
+}
+.input:hover,
+.textarea:hover {
+  background: var(--field-bg-hover);
+}
+.input:focus,
+.textarea:focus {
+  background: var(--field-bg-hover);
+  border-color: var(--field-border-focus);
+}
+.inputError,
+.textareaError { border-color: rgba(199,80,55,0.7); }
+
+.textarea { resize: vertical; font-size: 17px; }
+
+/* ---------- Select ---------- */
+.select {
+  font-family: var(--font);
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .input,
+  .textarea,
+  .select {
+    font-size: 16px;
+    padding: 11px 14px;
+  }
+  .textarea { font-size: 16px; }
+}

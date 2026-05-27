@@ -1,0 +1,130 @@
+/* ---------- Contact info strip ---------- */
+.infoStrip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: rgba(20,24,17,0.65);
+  border: 1px solid rgba(244,237,237,0.08);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+}
+
+.cardIcon    { font-size: 26px; margin-bottom: 10px; }
+.cardEyebrow {
+  font-family: var(--font);
+  font-size: 13px;
+  color: var(--ink-faint);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.cardValue { font-family: var(--font); font-size: 19px; color: #fff; margin-top: 4px; }
+.cardHint  { font-family: var(--font); font-size: 13px; color: var(--ink-faint); margin-top: 6px; }
+
+/* ---------- Contact grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+/* ---------- Seg button (topic chips) ---------- */
+.segBtn {
+  font-family: var(--font);
+  font-size: 15px;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  border: 1px solid rgba(244,237,237,0.12);
+  background: rgba(244,237,237,0.06);
+  color: var(--ink-dim);
+  transition: all 0.15s;
+}
+.segBtnActive {
+  background: rgba(137,222,159,0.18);
+  border-color: rgba(137,222,159,0.5);
+  color: var(--green-b);
+}
+
+/* ---------- Auth card (right column form) ---------- */
+.formCard {
+  background: rgba(20,24,17,0.78);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(244,237,237,0.08);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+/* ---------- Hero pill ---------- */
+.heroPill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: rgba(137,222,159,0.14);
+  color: var(--green-b);
+  font-family: var(--font);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* ---------- Select ---------- */
+.select {
+  font-family: var(--font);
+  font-size: 18px;
+  color: var(--ink);
+  background: var(--field-bg);
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* ---------- Success ---------- */
+.success {
+  text-align: center;
+  padding: 40px 0;
+}
+.successIcon {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-a), var(--green-b));
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  color: #0a1410;
+  font-size: 36px;
+  font-weight: 700;
+  font-family: var(--font);
+}
+.successTitle { font-family: var(--font); color: #fff; font-size: 28px; }
+.successBody  { font-family: var(--font); color: var(--ink-dim); margin-top: 10px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .grid      { grid-template-columns: 1fr; gap: 40px; }
+  .infoStrip { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .formCard { padding: 28px 24px; }
+}
+
+@media (max-width: 640px) {
+  .infoStrip  { grid-template-columns: 1fr; gap: 12px; margin-bottom: 28px; }
+  .card       { padding: 18px; }
+  .cardValue  { font-size: 17px; }
+  .formCard   { padding: 22px 18px; border-radius: 18px; }
+  .segBtn     { font-size: 14px; padding: 8px 14px; }
+  .success    { padding: 28px 0; }
+  .successTitle { font-size: 24px; }
+  .successIcon  { width: 64px; height: 64px; font-size: 30px; }
+}

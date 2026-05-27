@@ -1,0 +1,67 @@
+/* ---------- Auth shell grid ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 60px;
+  align-items: center;
+}
+
+.card {
+  background: rgba(20,24,17,0.78);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(244,237,237,0.08);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+}
+
+/* ---------- Auth bullets ---------- */
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0;
+  display: grid;
+  gap: 16px;
+  max-width: 520px;
+}
+
+.bullet {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.bulletCheck {
+  width: 28px; height: 28px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--green-a), var(--green-b));
+  display: grid;
+  place-items: center;
+  color: #0a1410;
+  font-weight: 700;
+  font-family: var(--font);
+  font-size: 16px;
+}
+
+.bulletTitle { font-family: var(--font); font-size: 17px; color: #fff; }
+.bulletBody  { font-family: var(--font); font-size: 15px; color: var(--ink-dim); margin-top: 2px; line-height: 1.4; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .grid    { grid-template-columns: 1fr; gap: 40px; }
+  .bullets { margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 768px) {
+  .card { padding: 28px 24px; }
+}
+
+@media (max-width: 640px) {
+  .card    { padding: 22px 18px; border-radius: 18px; }
+  .bullets { margin-top: 24px; gap: 14px; }
+}
+
+@media (max-width: 380px) {
+  .card { padding: 20px 16px; }
+}

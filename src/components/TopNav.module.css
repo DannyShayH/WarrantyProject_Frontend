@@ -1,0 +1,151 @@
+/* ---------- Top nav ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(244,237,237,0.08);
+}
+
+.inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 16px 48px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.logoWrap { justify-self: start; }
+.links    { display: flex; gap: 4px; align-items: center; justify-self: center; }
+.actions  { display: flex; gap: 10px; align-items: center; justify-self: end; }
+
+/* ---------- Logo ---------- */
+.logo {
+  background: transparent;
+  border: 0;
+  padding: 8px 4px;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- Nav link ---------- */
+.navLink {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  color: var(--ink-dim);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  position: relative;
+  font-weight: 400;
+  transition: color 0.15s;
+}
+.navLink:hover   { color: #fff; }
+.navLinkActive   { color: #fff; font-weight: 600; }
+.navLinkUnderline {
+  position: absolute;
+  left: 14px; right: 14px; bottom: 4px; height: 2px;
+  background: linear-gradient(90deg, var(--green-a), var(--green-b));
+  border-radius: 2px;
+}
+
+/* ---------- User chip ---------- */
+.userChip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 6px;
+  border-radius: var(--radius-pill);
+  background: rgba(244,237,237,0.06);
+  border: 1px solid rgba(244,237,237,0.08);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+  font-family: var(--font);
+}
+.userChip:hover {
+  background: rgba(244,237,237,0.12);
+  transform: translateY(-1px);
+}
+.userChipAvatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-a), var(--green-b));
+  display: grid;
+  place-items: center;
+  color: #0a1410;
+  font-weight: 700;
+  font-family: var(--font);
+}
+.userChipName {
+  font-family: var(--font);
+  color: var(--ink);
+  font-size: 16px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1280px) {
+  .inner { padding: 16px 32px; }
+}
+
+@media (max-width: 1024px) {
+  .inner { padding: 14px 24px; gap: 16px; }
+}
+
+@media (max-width: 768px) {
+  .inner   { padding: 12px 20px; gap: 12px; }
+  .navLink { font-size: 16px; padding: 8px 10px; letter-spacing: 0.4px; }
+  .links   { gap: 0; }
+}
+
+@media (max-width: 640px) {
+  .inner {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "logo    actions"
+      "links   links";
+    padding: 10px 16px;
+    gap: 8px 10px;
+  }
+  .logoWrap { grid-area: logo; justify-self: start; }
+  .actions  { grid-area: actions; justify-self: end; gap: 8px; }
+  .links {
+    grid-area: links;
+    justify-self: stretch;
+    justify-content: center;
+    gap: 2px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 2px;
+  }
+  .links::-webkit-scrollbar { display: none; }
+  .navLink {
+    font-size: 14px;
+    padding: 6px 10px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .navLinkUnderline { left: 10px; right: 10px; bottom: 2px; }
+  .logo             { font-size: 22px; padding: 4px 2px; }
+  .userChip         { padding: 4px; }
+  .userChipName     { display: none; }
+}
+
+@media (max-width: 380px) {
+  .inner   { padding: 8px 12px; }
+  .navLink { font-size: 13px; padding: 6px 8px; }
+  .logo    { font-size: 20px; }
+}

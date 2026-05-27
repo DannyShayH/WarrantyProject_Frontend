@@ -1,0 +1,40 @@
+/* ---------- Form card ---------- */
+.formCard {
+  background: rgba(20,24,17,0.7);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(244,237,237,0.08);
+  border-radius: var(--radius-xl);
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* ---------- Tip box ---------- */
+.tipBox {
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: rgba(137,222,159,0.06);
+  border: 1px solid rgba(137,222,159,0.18);
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--ink-dim);
+  line-height: 1.5;
+}
+
+/* ---------- Strength bars ---------- */
+.strengthBars { display: flex; gap: 4px; margin-top: 6px; }
+.strengthBar  { flex: 1; height: 4px; border-radius: 2px; transition: background 0.2s; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .formCard { padding: 28px 24px; }
+}
+
+@media (max-width: 640px) {
+  .formCard { padding: 22px 18px; border-radius: 18px; gap: 18px; }
+}
+
+@media (max-width: 380px) {
+  .formCard { padding: 20px 16px; }
+}

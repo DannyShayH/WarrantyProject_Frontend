@@ -1,0 +1,33 @@
+/* ---------- Section header ---------- */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-a), var(--green-b));
+  display: grid;
+  place-items: center;
+  color: #0a1410;
+  font-weight: 700;
+  font-family: var(--font);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.title { font-family: var(--font); font-size: 20px; color: #fff; }
+.sub   { font-family: var(--font); font-size: 13px; color: var(--ink-faint); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .title { font-size: 18px; }
+}
+
+@media (max-width: 640px) {
+  .title { font-size: 17px; }
+  .sub   { font-size: 12px; }
+}
