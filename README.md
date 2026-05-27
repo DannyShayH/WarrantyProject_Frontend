@@ -4,6 +4,12 @@ A full-stack warranty tracking web application. Register products, attach receip
 
 **Live:** https://warrantyproject.greymansshop.dk
 
+**Test credentials:**  
+
+Email: Shay@gmail.com 
+
+Password: Sayyes4312
+
 **Portfolio Site:** https://dannyshayh.github.io/Portfolio/posts/warranty_frontend/frontend/
 
 ---
