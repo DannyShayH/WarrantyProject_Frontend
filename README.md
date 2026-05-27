@@ -4,7 +4,7 @@ A full-stack warranty tracking web application. Register products, attach receip
 
 **Live:** https://warrantyproject.greymansshop.dk
 
-**Test credentials:**  
+**Test credentials for deployed website:**  
 
 Email: Shay@gmail.com 
 
