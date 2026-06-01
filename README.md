@@ -12,6 +12,8 @@ Password: Sayyes4312
 
 **Portfolio Site:** https://dannyshayh.github.io/Portfolio/posts/warranty_frontend/frontend/
 
+**Youtube Link:** https://youtu.be/wZe79Jmq6Sg
+
 ---
 
 ## Tech Stack
